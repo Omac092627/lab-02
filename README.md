@@ -62,3 +62,6 @@ Given that a user opens the application in the browser When the user navigates t
 How are we implementing it?
 Style your application using floats.
 Utilize at least one Google font.
+
+
+sources included w3 schools.
