@@ -3,12 +3,12 @@
 let infoArray = [];
 let name = [];
 
-function SonStuff(url, title, description, keyword, horns){
-    this.url = url;
-    this.title = title;
-    this.description = description;
-    this.keyword = keyword;
-    this.horns = horns;
+function SonStuff(creature){
+    this.url = creature.image_url;
+    this.title = creature.title;
+    this.description = creature.description;
+    this.keyword = creature.keyword;
+    this.horns = creature.horns;
     infoArray.push(this);
 };
 
@@ -32,7 +32,6 @@ function displayImages(){
     name.forEach((key, idx) =>{
         if(picked === 'default'){
             $('section').fadeIn(0);
-            $('.photo-template').fadeOut();
         } else{
             $('section').fadeOut(0);
             $(`.${picked}`).fadeIn(0);
@@ -44,8 +43,8 @@ $(document).ready(function(){
     $.ajax('/data/page-1.json')
         .then(data =>{
             data.forEach((object, indx) => {
-            let info = new SonStuff (object.image_url, object.title, object.description, object.keyword, object.horns);
-            info.render();
+            let creature = new SonStuff(object)
+            creature.render();
 
             if(!name.includes(object.keyword)){
                 name.push(object.keyword);
