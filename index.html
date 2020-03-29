@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link  href="css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Comic+Neue&display=swap" rel="stylesheet">
+    <script  id="eastWood" type="x-tmpl-mustache">
+      <h2 id="{{title}}">{{title}}</h2>
+      <img id="{{images}}" src="{{image_url}}" alt="{{title}}" >
+      <p id="{{description}}">{{description}}</p>
+    </script>
   </head>
   <body>
     <header>
@@ -14,16 +19,16 @@
       </select>
     </header>
     <main>
-      <section class="photo-template">
-        <h2></h2>
-        <img id="images" src="" alt="" >
-        <p></p>
+      <section id="photo-template">
+      </section>
+      <section id="photo-template2">
       </section>
     </main>
     <footer>
       &copy; 2018 Code Fellows
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/mustache@latest"></script>
     <script type="text/javascript" src="js/app.js"></script>
   </body>
 </html>

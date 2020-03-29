@@ -14,3 +14,9 @@ h1{
     font-family:  'Comic Neue', cursive;
 }
 
+.photo-template{
+    display: none;
+}
+.photo-template2{
+    display: none;
+}
